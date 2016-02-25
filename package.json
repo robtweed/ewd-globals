@@ -1,6 +1,6 @@
 {
   "name": "ewd-globals",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Abstraction of Global Storage database as persistent JavaScript Objects and Document Database",
   "main": "index.js",
   "scripts": {
