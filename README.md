@@ -39,12 +39,27 @@ You first must open a connection to the database using the appropriate interface
     var db = new interface.Gtm();
     var ok = db.open();
 
-Now do the following:
+###Now do the following:
 
     var abstraction = require('ewd-globals');
     var globalStore = new abstraction(db);
 
 The resulting globalStore object provides a JavaScript abstraction of the Global Storage database.
+
+## Examples
+
+Examples showing use of ewd-globals are included in the /lib/tests directory of this repository
+
+/lib/tests/CacheStandalone.js is a script that can be run as a standalone test harness.  It includes examples 
+of most of the globalStore object's properties and methods.
+
+/lib/tests/CacheExpress1.js is an Express/ewd-qoper8 script that loads /lib/tests/CacheModule1.js into the worker 
+processes.  This demonstrates a fully manual use of ewd-globals
+
+/lib/tests/CacheExpress2.js is an Express/ewd-qoper8 script that loads /lib/tests/CacheModule2.js into the worker 
+processes.  This demonstrates the use of the ewd-qoper8-cache module that automates the use of ewd-globals when using
+the InterSystems Cache database.
+
 
 For full details of the globalStore's Methods, Properties and Events, see [to be completed]
 
